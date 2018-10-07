@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="meuestilo.css">
+
+        <title>Tutorial da Linguagem C</title>
+    </head>
+
+    <body>
+
+            <div class="corpo">
+                <div class="artigos">
+                    <div class="espacamento">
+                        <h1>Tutorial Linguagem C</h1>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\CBSI_MAT.jpg">
+                        </p>
+                        <p>
+                        Você já viu um programa básico em C. Antes de começar a se dedicar ao estudo de C, é bom que você compreenda alguns termos e alguns aspectos da linguagem, o que facilitará sua compreensão dos capítulos seguintes. A seguir, formalizaremos alguns aspectos da estrutura básica da linguagem.
+                        </p>
+                        <p>
+                          * Um programa em C é basicamente estruturado em blocos de código. Blocos nada mais são que conjuntos de instruções, e devem ser delimitados com chaves ({ ... }). Um bloco também pode conter outros blocos.
+                        </p>
+                        <p>
+                          * Uma instrução geralmente corresponde a uma ação executada, e deve sempre terminar com ponto-e-vírgula (;).
+                        </p>
+                        <p>
+                          * O compilador ignora espaços, tabulações e quebras de linha no meio do código; esses caracteres são chamados genericamente de espaço em branco (whitespace). Ou seja, os três trechos a seguir são equivalentes:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\1.png">
+                        </p>
+                        <p>
+                            No entanto, você achará muito mais fácil de ler um estilo de código mais parecido com o segundo exemplo. Costuma-se usar (mas não abusar de) espaços e tabulações para organizar o código. Tal prática é chamada de indentação do código. Trata-se de uma convenção de escrita de códigos fonte que visa modificar a estética do programa para auxiliar a sua leitura e interpretação. Ela tem como objetivo indicar a hierarquia dos elementos.
+                        </p>
+                        <p>
+                            * A linguagem é sensível à utilização de maiúsculas e minúsculas. Por exemplo, se você escrevesse Printf no lugar de printf, ocorreria um erro, pois o nome da função é totalmente em minúsculas.
+                        </p>
+            
+                    </div>
+                </div>
+                <div class="escopo">
+                    <div class="espacamento">
+                        <h2>Escopo</h2>
+                        <p>
+                            Geralmente, em programação, não queremos que outras funções usem as variáveis que estamos manipulando no momento. O conceito de escopo está justamente relacionado a isso. Escopo é o nível em que um dado pode ser acessado; em C há dois níveis: local e global. Uma variável global pode ser acessada por qualquer parte do programa; variáveis locais podem ser acessadas apenas dentro do bloco onde foram declaradas (ou nos seus sub-blocos), mas não fora dele (ou nos blocos que o contêm). Isso possibilita que você declare várias variáveis com o mesmo nome mas em blocos diferentes. Veja um exemplo:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\2.png" />
+                        </p>
+                        <p>
+                           As duas variáveis chamadas b são diferentes e só podem ser acessadas dentro do próprio bloco. A primeira variável a é global, mas só pode ser acessada no segundo bloco, pois a variável local a no primeiro bloco oculta a variável global de mesmo nome. Note que isso é possível em C, e tome cuidado para não cometer erros por causa disso.
+                        </p>
+                    <div class="bibliotecas">
+                    <div class="espacamento">
+                        <h2>Bibliotecas</h2>
+                        <p>
+                            Uma biblioteca é um arquivo contendo um conjunto de funções (pedaços de código) já implementados e que podem ser utilizados pelo programador em seu programa. O comando #include é utilizado para declarar as bibliotecas que serão utilizadas pelo programa. Esse comando diz ao pré-processador para tratar o conteúdo de um arquivo especificado como se o seu conteúdo houvesse sido digitado no programa no ponto em que o comando #include aparece.
+                        </p>
+                        <p>
+                            O comando #include permite duas sintaxes:
+                        </p>
+                        <p>
+                            * #include <nome_da_biblioteca>: o pré-processador procurará pela biblioteca nos caminhos de procura pré-especificados do compilador. Usa-se essa sintaxe quando estamos incluindo uma biblioteca que é própria do sistema, como as bibliotecas stdio.h e stdlib.h;
+                        </p>
+                        <p>
+                            * #include "nome_da_biblioteca": o pré-processador procurará pela biblioteca no mesmo diretório onde se encontra o nosso programa. Podemos ainda optar por informar o nome do arquivo com o caminho completo, ou seja, em qual diretório ele se encontra e como chegar até lá.
+                        </p>
+                        <p>
+                            De modo geral, os arquivos de bibliotecas na linguagem C são terminados com a extensão .h. Veja dois exemplos do uso do comando #include:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\3.png" />
+                        </p>
+                        <p>
+                            Na primeira linha, o comando #include é utilizado para adicionar uma biblioteca do sistema: stdio.h (que contém as funções de leitura do teclado e escrita em tela). Já na segunda linha, o comando é utilizado para adicionar uma biblioteca de nome soma.h, localizada no diretório "D:\Programas\".
+                        </p>
+                        <div class="Introdução às funções">
+                        <div class="espacamento">
+                        <h2>Introdução às funções</h2>
+                        <p>
+                            Funções são muito usadas, não só em C, mas em linguagens de programação em geral. Uma função é basicamente um bloco de código que realiza uma certa tarefa. Quando queremos realizar aquela tarefa, simplesmente fazemos uma chamada de função para a função correspondente.
+                        </p>
+                        <p>
+                            Uma função pode precisar que o programador dê certos dados para realizar a tarefa; esses dados são chamados argumentos. A função também pode retornar um valor, que pode indicar se a tarefa foi realizada com sucesso, por exemplo; esse valor é o valor de retorno. Podemos fazer uma analogia com as funções matemáticas: as variáveis independentes são os argumentos e o valor numérico da função é o valor de retorno.
+                        </p>
+                        <p>
+                            Em C, para chamar uma função, devemos escrever o seu nome, seguido da lista de argumentos (separados por vírgula) entre parênteses, mesmo que não haja nenhum argumento. Lembre que a chamada de função também é uma instrução, portanto devemos escrever o ponto-e-vírgula no final. Alguns exemplos de chamadas de funções:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\4.png" />
+                        </p>
+                        <p>
+                            Se quisermos saber o valor de retorno de uma função, podemos armazená-lo numa variável. Variáveis serão introduzidas logo adiante, mas a sintaxe é muito fácil de aprender:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\5.png" />
+                        </p>
+                        <p>
+                            Vejamos um exemplo completo:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\6.png" />
+                        </p>
+                        <p>
+                            Em C, todo o código (exceto as declarações de variáveis e funções) deve estar dentro de funções. Todo programa deve ter pelo menos uma função, a função main, que é por onde começa a execução do programa.
+                        </p>
+                        <div class="Expressões">
+                        <div class="espacamento">
+                        <h2>Expressões</h2>
+                        <p>
+                            Um conceito muito importante em programação é o de expressão. Expressões são conjuntos de valores, variáveis, operadores e chamadas de funções que são avaliados ou interpretados para resultar num certo valor, que é chamado o valor da expressão. Por exemplo:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\7.png" />
+                        </p>
+                         <div class="Comentários">
+                        <div class="espacamento">
+                        <h2>Comentários</h2>
+                        <p>
+                            Muitas vezes é bastante útil colocar comentários no código, por exemplo para esclarecer o que uma função faz, ou qual a utilidade de um argumento, etc. A maioria das linguagens de programação permite comentários; em C, eles podem aparecer de duas maneiras:
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\8.png" />
+                        </p>
+                        <p>
+                            e
+                        </p>
+                        <p>
+                            <img src="C:\Users\newes\Desktop\HTML\TUTORIALC\9.png" />
+                        </p>
+                        <p>
+                            Tudo que estiver entre as marcas /* e */ ou entre // será ignorado pelo compilador. Note que os comentários de uma linha só (iniciados por //) foram incorporados ao padrão da linguagem apenas em 1999, e portanto alguns compiladores podem não os suportar. As versões mais recentes do GCC não terão problema em suportar esse tipo de comentário.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
